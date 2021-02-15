@@ -1,0 +1,88 @@
+<form #formElement="ngForm" (ngSubmit)="save()">
+  <div class="columns is-gapless is-vcentered">
+    <div class="column is-6">
+      <mat-form-field class="full-width">
+        <mat-label>Description</mat-label>
+        <input
+          matInput
+          placeholder="Sprint Description"
+          id="description"
+          type="text"
+          required
+          [(ngModel)]="sprint.description"
+          name="description"
+          #descriptionVar="ngModel"
+          [ngClass]="{'is-invalid': descriptionVar.touched && !descriptionVar.valid }"
+          />
+        <mat-error *ngIf="descriptionVar.invalid">Description is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="column is-2">
+      <mat-form-field class="full-width">
+        <mat-label>From date</mat-label>
+        <input
+          matInput
+          placeholder="Sprint starts on..."
+          id="fromDate"
+          required
+          [(ngModel)]="sprint.fromDate"
+          name="fromDate"
+          #fromDateVar="ngModel"
+          [ngClass]="{'is-invalid': fromDateVar.touched && !fromDateVar.valid }"
+          [matDatepicker]="fromPicker"
+          value="3/1/2021"/>
+        <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+        <mat-datepicker #fromPicker></mat-datepicker>
+        <mat-error *ngIf="fromDateVar.invalid">A valid date is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="column is-2">
+      <mat-form-field class="full-width">
+        <mat-label>To date</mat-label>
+        <input
+          matInput
+          placeholder="Sprint finishes on..."
+          id="toDate"
+          required
+          [(ngModel)]="sprint.toDate"
+          name="toDate"
+          #toDateVar="ngModel"
+          [ngClass]="{'is-invalid': toDateVar.touched && !toDateVar.valid }"
+          [matDatepicker]="toPicker"
+          value="3/14/2021"/>
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="toPicker">
+        </mat-datepicker-toggle>
+        <mat-datepicker #toPicker></mat-datepicker>
+        <mat-error *ngIf="toDateVar.invalid">A valid date is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="column is-2 is-centered">
+      <button
+        style="margin-left: 10px;"
+        mat-icon-button
+        color="primary"
+        aria-label="Save"
+        [disabled]="formElement.invalid">
+        <mat-icon>save</mat-icon>
+      </button>
+      <button
+        (click)="cancel()"
+        mat-icon-button
+        color="primary"
+        aria-label="Save"
+        [disabled]="formElement.invalid">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </div>
+  </div>
+</form>
+<div class="full-width" style="margin-top: 30px;">
+  <div *ngFor="let sprint of sprints" class="columns is-gapless is-vcentered" (click)="itemClick(sprint)">
+    <div class="column is-6">{{sprint.description}}</div>
+    <div class="column is-2">{{sprint.fromDate | date:'MM/dd/yyyy'}}</div>
+    <div class="column is-2">{{sprint.toDate | date:'MM/dd/yyyy'}}</div>
+    <div class="column is-2" style="margin-left: 10px;">{{calcDays(sprint).toFixed(0)}}D</div>
+  </div>
+</div>

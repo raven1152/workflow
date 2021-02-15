@@ -1,0 +1,155 @@
+{
+  "journalEntries": [
+    {
+      "in": "2021-01-08T08:30:00.000-05:00",
+      "out": "2021-01-08T18:00:00.000-05:00",
+      "breaks": [
+        {
+          "out": "2021-01-08T011:30:00.000-05:00",
+          "in": "2021-01-08T12:30:00.000-05:00"
+        },
+        {
+          "out": "2021-01-08T015:00:00.000-05:00",
+          "in": "2021-01-08T15:30:00.000-05:00"
+        }
+      ],
+      "capitalHours": 7.25,
+      "operationsHours": 0,
+      "breakHours": 1.5,
+      "milestones": 0,
+      "items": [
+        {
+          "description": "Worked on EA Bank Account User Story -- 90% complete",
+          "in": "2021-01-08T08:30:00.000-05:00",
+          "out": "2021-01-08T10:30:00.000-05:00",
+          "notes": "these are the notes",
+          "taskId": "463672"
+        },
+        {
+          "description": "Put together a task list for deployment on Wed",
+          "in": "2021-01-08T10:30:00.000-05:00",
+          "out": "2021-01-08T11:30:00.000-05:00",
+          "notes": "these are more notes",
+          "taskId": "463680"
+        },
+        {
+          "description": "Researched security issues that come with doing a file upload that is unsecured, and how to mitigate risk",
+          "in": "2021-01-08T16:30:00.000-05:00",
+          "out": "2021-01-08T17:30:00.000-05:00",
+          "notes": "what about notes",
+          "taskId": "463688"
+        },
+        {
+          "description": "PR2757 - completed PR with comments, waiting on Alex",
+          "in": "2021-01-08T16:30:00.000-05:00",
+          "out": "2021-01-08T17:30:00.000-05:00",
+          "notes": "these are lousy notes",
+          "taskId": "463701"
+        }
+      ]
+    },
+    {
+      "in": "2021-01-09T08:30:00.000-05:00",
+      "out": "2021-01-09T19:00:00.000-05:00",
+      "breaks": [
+        {
+          "out": "2021-01-09T011:30:00.000-05:00",
+          "in": "2021-01-09T12:30:00.000-05:00"
+        },
+        {
+          "out": "2021-01-09T015:00:00.000-05:00",
+          "in": "2021-01-09T15:30:00.000-05:00"
+        }
+      ],
+      "capitalHours": 6,
+      "operationsHours": 0,
+      "breakHours": 1.5,
+      "milestones": 0,
+      "items": [
+        {
+          "description": "Did a trial merge from 8-3 RC into 9-9 RC.  No issues were encountered.  The trial merge target is named RC_WebsiteNext_2020_09_09_Merge_08_03",
+          "in": "2021-01-09T08:30:00.000-05:00",
+          "out": "2021-01-09T10:30:00.000-05:00",
+          "notes": "these are the notes",
+          "taskId": "463672"
+        },
+        {
+          "description": "Changed Bug 130479 to a User Story (130619)",
+          "in": "2021-01-09T10:30:00.000-05:00",
+          "out": "2021-01-09T11:30:00.000-05:00",
+          "notes": "these are more notes",
+          "taskId": "463680"
+        },
+        {
+          "description": "Added User Story for hardening security on ID Verification File Upload (130617)",
+          "in": "2021-01-09T16:30:00.000-05:00",
+          "out": "2021-01-09T17:30:00.000-05:00",
+          "notes": "what about notes",
+          "taskId": "463688"
+        },
+        {
+          "description": "Completed PR 2807 for Alex",
+          "in": "2021-01-09T16:30:00.000-05:00",
+          "out": "2021-01-09T17:30:00.000-05:00",
+          "notes": "these are lousy notes",
+          "taskId": "130328"
+        },
+        {
+          "description": "Submit PR for EA Bank Account User Story (130619)",
+          "in": "2021-01-09T17:30:00.000-05:00",
+          "out": "2021-01-09T19:00:00.000-05:00",
+          "notes": "these are more lousy notes",
+          "taskId": "130619"
+        }
+      ]
+    },
+    {
+      "in": "2021-01-10T08:30:00.000-05:00",
+      "out": "2021-01-10T18:00:00.000-05:00",
+      "breaks": [
+        {
+          "out": "2021-01-10T011:30:00.000-05:00",
+          "in": "2021-01-10T12:30:00.000-05:00"
+        },
+        {
+          "out": "2021-01-10T015:00:00.000-05:00",
+          "in": "2021-01-10T15:30:00.000-05:00"
+        }
+      ],
+      "capitalHours": 5.5,
+      "operationsHours": 0,
+      "breakHours": 1.5,
+      "milestones": 2,
+      "items": [
+        {
+          "description": "Completed Bug 130152",
+          "in": "2021-01-10T08:30:00.000-05:00",
+          "out": "2021-01-10T10:30:00.000-05:00",
+          "notes": "these are the notes",
+          "taskId": "463672"
+        },
+        {
+          "description": "Started Bug 130149",
+          "in": "2021-01-10T10:30:00.000-05:00",
+          "out": "2021-01-10T11:30:00.000-05:00",
+          "notes": "these are more notes",
+          "taskId": "463680"
+        },
+        {
+          "description": "Did Production Rollout",
+          "in": "2021-01-10T16:30:00.000-05:00",
+          "out": "2021-01-10T17:30:00.000-05:00",
+          "notes": "what about notes",
+          "taskId": "463688"
+        },
+        {
+          "description": "Worked on production issue w/ Scott",
+          "in": "2021-01-10T16:30:00.000-05:00",
+          "out": "2021-01-10T17:30:00.000-05:00",
+          "notes": "these are lousy notes",
+          "taskId": "463701"
+        }
+      ]
+    }
+  ]
+}

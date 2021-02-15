@@ -1,0 +1,13 @@
+<mat-accordion class="example-headers-align" multi>
+  <mat-expansion-panel *ngFor="let task of tasks" style="align-items: flex-end">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{task.taskId}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{task.taskDescription}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <pre>{{getJsonString(task)}}</pre>
+  </mat-expansion-panel>
+</mat-accordion>
