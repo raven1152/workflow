@@ -3,6 +3,7 @@ import { Sprint } from '../../models/sprint';
 import { SprintService } from '../../services/sprint.service';
 import * as dayjs from 'dayjs';
 import { NgForm } from '@angular/forms';
+import { MatInput } from '@angular/material/input';
 
 @Component({
   selector: 'app-sprints',
@@ -13,6 +14,7 @@ export class SprintsComponent implements OnInit {
   sprint: Sprint = new Sprint();
   sprints: Sprint[] = [];
   @ViewChild('formElement') formElement: NgForm;
+  @ViewChild('descriptionVar') descriptionVar: MatInput;
 
   constructor(private sprintService: SprintService) {}
 
@@ -42,9 +44,12 @@ export class SprintsComponent implements OnInit {
   initSprint(sprint?: Sprint) {
     this.sprint = new Sprint();
     if (sprint) {
+      const from = dayjs(sprint.fromDate);
+      const to = dayjs(sprint.toDate);
+      const days = to.diff(from, 'days');
       this.sprint.description = sprint.description;
       this.sprint.fromDate = sprint.toDate;
-      this.sprint.toDate = dayjs(sprint.toDate).add(2, 'weeks').toDate();
+      this.sprint.toDate = dayjs(sprint.toDate).add(days, 'days').toDate();
     }
   }
 
@@ -61,6 +66,12 @@ export class SprintsComponent implements OnInit {
   cancel() {
     this.sprint = new Sprint();
     this.formElement.resetForm();
+  }
+
+  new() {
+    if (this.sprints.length) {
+      this.initSprint(this.sprints[this.sprints.length - 1]);
+    }
   }
 
   save() {

@@ -72,17 +72,25 @@
         mat-icon-button
         color="primary"
         aria-label="Save"
-        [disabled]="formElement.invalid">
+        *ngIf="!formElement.invalid">
         <mat-icon>cancel</mat-icon>
+      </button>
+      <button
+        (click)="new()"
+        mat-icon-button
+        color="primary"
+        aria-label="New"
+        *ngIf="formElement.invalid">
+        <mat-icon>create</mat-icon>
       </button>
     </div>
   </div>
 </form>
-<div class="full-width" style="margin-top: 30px;">
-  <div *ngFor="let sprint of sprints" class="columns is-gapless is-vcentered" (click)="itemClick(sprint)">
-    <div class="column is-6">{{sprint.description}}</div>
-    <div class="column is-2">{{sprint.fromDate | date:'MM/dd/yyyy'}}</div>
-    <div class="column is-2">{{sprint.toDate | date:'MM/dd/yyyy'}}</div>
-    <div class="column is-2" style="margin-left: 10px;">{{calcDays(sprint).toFixed(0)}}D</div>
+<div class="full-width">
+  <div *ngFor="let sp of sprints" class="columns is-gapless is-vcentered no-spacing"[ngClass]="{ 'selected-item': sp.id === sprint.id }" (click)="itemClick(sp)">
+    <div class="column is-6 no-spacing">{{sp.description}}</div>
+    <div class="column is-2 no-spacing">{{sp.fromDate | date:'MM/dd/yyyy'}}</div>
+    <div class="column is-2 no-spacing">{{sp.toDate | date:'MM/dd/yyyy'}}</div>
+    <div class="column is-2 no-spacing" style="margin-left: 10px;">{{calcDays(sp).toFixed(0)}}D</div>
   </div>
 </div>
