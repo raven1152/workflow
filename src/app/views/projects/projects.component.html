@@ -1,0 +1,85 @@
+<form #formElement="ngForm" (ngSubmit)="save()">
+  <div class="columns is-gapless is-vcentered">
+    <div class="column is-6">
+      <mat-form-field class="full-width">
+        <mat-label>Description</mat-label>
+        <input
+          matInput
+          placeholder="Project Description"
+          id="projectDescription"
+          type="text"
+          required
+          [(ngModel)]="project.projectDescription"
+          name="projectDescription"
+          #projectDescriptionVar="ngModel"
+          [ngClass]="{'is-invalid': projectDescriptionVar.touched && !projectDescriptionVar.valid }"
+        />
+        <mat-error *ngIf="projectDescriptionVar.invalid">Description is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="column is-2">
+      <mat-form-field class="full-width">
+        <mat-label>Project Code</mat-label>
+        <input
+          matInput
+          placeholder="Project Code"
+          id="projectCode"
+          required
+          [(ngModel)]="project.projectCode"
+          name="projectCode"
+          #projectCodeVar="ngModel"
+          [ngClass]="{'is-invalid': projectCodeVar.touched && !projectCodeVar.valid }"/>
+        <mat-error *ngIf="projectCodeVar.invalid">A valid project code is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="column is-2">
+      <mat-form-field class="full-width">
+        <mat-label>Project Task</mat-label>
+        <input
+          matInput
+          placeholder="Project Task"
+          id="projectTask"
+          required
+          [(ngModel)]="project.projectTask"
+          name="projectTask"
+          #projectTaskVar="ngModel"
+          [ngClass]="{'is-invalid': projectTaskVar.touched && !projectTaskVar.valid }"/>
+        <mat-error *ngIf="projectTaskVar.invalid">A valid task id is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="column is-2 is-centered">
+      <button
+        style="margin-left: 10px;"
+        mat-icon-button
+        color="primary"
+        aria-label="Save"
+        [disabled]="formElement.invalid">
+        <mat-icon>save</mat-icon>
+      </button>
+      <button
+        (click)="cancel()"
+        mat-icon-button
+        color="primary"
+        aria-label="Save"
+        *ngIf="!formElement.invalid">
+        <mat-icon>cancel</mat-icon>
+      </button>
+      <button
+        (click)="new()"
+        mat-icon-button
+        color="primary"
+        aria-label="New"
+        *ngIf="formElement.invalid">
+        <mat-icon>create</mat-icon>
+      </button>
+    </div>
+  </div>
+</form>
+<div class="full-width">
+  <div *ngFor="let prj of projects" class="columns is-gapless is-vcentered no-spacing"[ngClass]="{ 'selected-item': prj.id === project.id }" (click)="itemClick(prj)">
+    <div class="column is-6 no-spacing">{{prj.projectDescription}}</div>
+    <div class="column is-2 no-spacing">{{prj.projectCode}}</div>
+    <div class="column is-2 no-spacing">{{prj.projectTask}}</div>
+    <div class="column is-2 no-spacing" style="margin-left: 10px;"></div>
+  </div>
+</div>

@@ -21,6 +21,7 @@ import { SprintsComponent } from './views/sprints/sprints.component';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { ProjectsComponent } from './views/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MatListModule } from '@angular/material/list';
     AuthButtonComponent,
     TaskViewComponent,
     SprintsComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
