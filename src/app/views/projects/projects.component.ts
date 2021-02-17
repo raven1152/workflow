@@ -51,6 +51,7 @@ export class ProjectsComponent implements OnInit {
     if (this.projects.length) {
       this.initProject(this.projects[this.projects.length - 1]);
     }
+    this.formElement.resetForm();
   }
 
   save() {

@@ -4,6 +4,7 @@ import { TaskViewComponent } from './views/task-view/task-view.component';
 import { JournalViewComponent } from './components/journal-view/journal-view.component';
 import { SprintsComponent } from './views/sprints/sprints.component';
 import { ProjectsComponent } from './views/projects/projects.component';
+import { TasksComponent } from './views/tasks/tasks.component';
 
 const routes: Routes = [
   {
@@ -23,8 +24,12 @@ const routes: Routes = [
     component: ProjectsComponent,
   },
   {
+    path: 'tasks',
+    component: TasksComponent,
+  },
+  {
     path: '',
-    redirectTo: '/projects',
+    redirectTo: '/tasks',
     pathMatch: 'full',
   },
 ];
