@@ -1,0 +1,102 @@
+<form #formElement="ngForm" (ngSubmit)="save()">
+  <div class="columns is-gapless is-vcentered">
+    <div class="column is-1">
+      <mat-form-field class="full-width">
+        <mat-label>Task ID</mat-label>
+        <input
+          matInput
+          placeholder="Task ID"
+          id="taskId"
+          type="text"
+          required
+          [(ngModel)]="task.taskId"
+          name="taskId"
+          #taskIdVar="ngModel"
+          [ngClass]="{'is-invalid': taskIdVar.touched && !taskIdVar.valid }"
+        />
+        <mat-error *ngIf="taskIdVar.invalid">Task ID is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="column is-4">
+      <mat-form-field class="full-width">
+        <mat-label>Task Description</mat-label>
+        <input
+          matInput
+          placeholder="Task Description"
+          id="taskDescription"
+          type="text"
+          required
+          [(ngModel)]="task.taskDescription"
+          name="taskDescription"
+          #taskDescriptionVar="ngModel"
+          [ngClass]="{'is-invalid': taskDescriptionVar.touched && !taskDescriptionVar.valid }"
+        />
+        <mat-error *ngIf="taskDescriptionVar.invalid">Task description is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="column is-1">
+      <mat-form-field class="full-width">
+        <mat-label>Planned Duration</mat-label>
+        <input
+          matInput
+          placeholder="Planned Duration"
+          id="plannedDuration"
+          required
+          [(ngModel)]="task.plannedDuration"
+          name="plannedDuration"
+          #plannedDurationVar="ngModel"
+          [ngClass]="{'is-invalid': plannedDurationVar.touched && !plannedDurationVar.valid }"/>
+        <mat-error *ngIf="plannedDurationVar.invalid">Planned duration is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="column is-3">
+      <mat-form-field class="full-width">
+        <mat-label>Project</mat-label>
+        <input
+          matInput
+          placeholder="Project"
+          id="project"
+          [(ngModel)]="task.project"
+          name="project"
+          #projectVar="ngModel"
+          [ngClass]="{'is-invalid': projectVar.touched && !projectVar.valid }"/>
+        <mat-error *ngIf="projectVar.invalid">A valid task id is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="column is-2 is-centered">
+      <button
+        style="margin-left: 10px;"
+        mat-icon-button
+        color="primary"
+        aria-label="Save"
+        [disabled]="formElement.invalid">
+        <mat-icon>save</mat-icon>
+      </button>
+      <button
+        (click)="cancel()"
+        mat-icon-button
+        color="primary"
+        aria-label="Save"
+        *ngIf="!formElement.invalid">
+        <mat-icon>cancel</mat-icon>
+      </button>
+      <button
+        (click)="new()"
+        mat-icon-button
+        color="primary"
+        aria-label="New"
+        *ngIf="formElement.invalid">
+        <mat-icon>create</mat-icon>
+      </button>
+    </div>
+  </div>
+</form>
+<div class="full-width">
+  <div *ngFor="let tsk of tasks" class="columns is-gapless is-vcentered no-spacing"[ngClass]="{ 'selected-item': tsk.id === task.id }" (click)="itemClick(tsk)">
+    <div class="column is-1 no-spacing">{{tsk.taskId}}</div>
+    <div class="column is-4 no-spacing">{{tsk.taskDescription}}</div>
+    <div class="column is-1 no-spacing">{{tsk.plannedDuration}}</div>
+    <div class="column is-3 no-spacing">{{tsk.project.projectCode}}</div>
+    <div class="column is-2 no-spacing" style="margin-left: 10px;"></div>
+  </div>
+</div>

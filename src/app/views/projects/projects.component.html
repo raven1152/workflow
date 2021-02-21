@@ -1,6 +1,6 @@
 <form #formElement="ngForm" (ngSubmit)="save()">
   <div class="columns is-gapless is-vcentered">
-    <div class="column is-6">
+    <div class="column is-5">
       <mat-form-field class="full-width">
         <mat-label>Description</mat-label>
         <input
@@ -17,7 +17,7 @@
         <mat-error *ngIf="projectDescriptionVar.invalid">Description is required</mat-error>
       </mat-form-field>
     </div>
-    <div class="column is-2">
+    <div class="column is-3">
       <mat-form-field class="full-width">
         <mat-label>Project Code</mat-label>
         <input

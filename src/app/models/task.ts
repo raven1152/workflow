@@ -1,4 +1,5 @@
 import { Project } from './project';
+import { Sprint } from './sprint';
 
 export class Task {
   id: number;
@@ -6,4 +7,5 @@ export class Task {
   taskDescription: string;
   plannedDuration: number;
   project: Project;
+  sprint: Sprint;
 }
