@@ -77,8 +77,8 @@
 </form>
 <div class="full-width">
   <div *ngFor="let prj of projects" class="columns is-gapless is-vcentered no-spacing"[ngClass]="{ 'selected-item': prj.id === project.id }" (click)="itemClick(prj)">
-    <div class="column is-6 no-spacing">{{prj.projectDescription}}</div>
-    <div class="column is-2 no-spacing">{{prj.projectCode}}</div>
+    <div class="column is-5 no-spacing">{{prj.projectDescription}}</div>
+    <div class="column is-3 no-spacing">{{prj.projectCode}}</div>
     <div class="column is-2 no-spacing">{{prj.projectTask}}</div>
     <div class="column is-2 no-spacing" style="margin-left: 10px;"></div>
   </div>
