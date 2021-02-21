@@ -34,7 +34,7 @@
         <mat-error *ngIf="taskDescriptionVar.invalid">Task description is required</mat-error>
       </mat-form-field>
     </div>
-    <div class="column is-2">
+    <div class="column is-1">
       <mat-form-field class="full-width">
         <mat-label>Planned Duration</mat-label>
         <input
@@ -95,7 +95,7 @@
   <div *ngFor="let tsk of tasks" class="columns is-gapless is-vcentered no-spacing"[ngClass]="{ 'selected-item': tsk.id === task.id }" (click)="itemClick(tsk)">
     <div class="column is-1 no-spacing">{{tsk.taskId}}</div>
     <div class="column is-4 no-spacing">{{tsk.taskDescription}}</div>
-    <div class="column is-2 no-spacing">{{tsk.plannedDuration}}</div>
+    <div class="column is-1 no-spacing">{{tsk.plannedDuration}}</div>
     <div class="column is-3 no-spacing">{{tsk.project.projectCode}}</div>
     <div class="column is-2 no-spacing" style="margin-left: 10px;"></div>
   </div>
