@@ -1,3 +1,14 @@
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+<mat-drawer-container class="app-container" autosize>
+  <mat-drawer #drawer class="app-sidenav" mode="side" opened="true">
+    <div>
+      Workflow
+    </div>
+  </mat-drawer>
+  <div class="app-main-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      <mat-icon *ngIf="drawer.opened">arrow_back</mat-icon>
+      <mat-icon *ngIf="!drawer.opened">arrow_forward</mat-icon>
+    </button>
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

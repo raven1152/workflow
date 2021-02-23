@@ -5,7 +5,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { JournalViewComponent } from './components/journal-view/journal-view.component';
+import { JournalEntriesComponent } from './components/journal-entries/journal-entries.component';
 import { ProjectsTasksComponent } from './components/projects-tasks/projects-tasks.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -23,11 +23,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { ProjectsComponent } from './views/projects/projects.component';
 import { TasksComponent } from './views/tasks/tasks.component';
+import { JournalViewComponent } from './views/journal-view/journal-view.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
     AppComponent,
     JournalViewComponent,
+    JournalEntriesComponent,
     ProjectsTasksComponent,
     AuthButtonComponent,
     TaskViewComponent,
@@ -52,6 +55,7 @@ import { TasksComponent } from './views/tasks/tasks.component';
     FormsModule,
     MatButtonModule,
     MatListModule,
+    MatSidenavModule
   ],
   providers: [
     MatDatepickerModule,

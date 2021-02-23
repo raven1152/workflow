@@ -3,11 +3,11 @@ import {MatAccordion} from '@angular/material/expansion';
 import { JournalService } from '../../services/journal.service';
 
 @Component({
-  selector: 'app-journal-view',
-  templateUrl: './journal-view.component.html',
-  styleUrls: ['./journal-view.component.css'],
+  selector: 'app-journal-entries',
+  templateUrl: './journal-entries.component.html',
+  styleUrls: ['./journal-entries.component.scss'],
 })
-export class JournalViewComponent {
+export class JournalEntriesComponent {
   @ViewChild(MatAccordion) accordion: MatAccordion | undefined;
 
   constructor(journal: JournalService) {
