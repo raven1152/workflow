@@ -25,6 +25,7 @@ import { ProjectsComponent } from './views/projects/projects.component';
 import { TasksComponent } from './views/tasks/tasks.component';
 import { JournalViewComponent } from './views/journal-view/journal-view.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     FormsModule,
     MatButtonModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatToolbarModule
   ],
   providers: [
     MatDatepickerModule,

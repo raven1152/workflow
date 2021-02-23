@@ -1,14 +1,55 @@
+<mat-toolbar color="primary" class="mat-elevation-z4">
+  <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Workflow App</span>
+  <span class="app-spacer"></span>
+  <button mat-icon-button>
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
 <mat-drawer-container class="app-container" autosize>
   <mat-drawer #drawer class="app-sidenav" mode="side" opened="true">
-    <div>
-      Workflow
-    </div>
+
+
+
+<!--    <div>-->
+<!--      Workflow-->
+<!--    </div>-->
+<!--    <mat-selection-list #shoes [multiple]="false">-->
+<!--      <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">-->
+<!--        {{shoe}}-->
+<!--      </mat-list-option>-->
+<!--    </mat-selection-list>-->
+
+
+
+
+    <nav>
+      <mat-selection-list multiple="false">
+        <mat-list-option><a class="mat-primary" routerLink="/journal-view" routerLinkActive="active">Journal View</a></mat-list-option>
+        <mat-list-option><a routerLink="/task-view" routerLinkActive="active">Task View</a></mat-list-option>
+        <mat-list-option><a routerLink="/sprints" routerLinkActive="active">Sprints</a></mat-list-option>
+        <mat-list-option><a routerLink="/projects" routerLinkActive="active">Projects</a></mat-list-option>
+        <mat-list-option><a routerLink="/tasks" routerLinkActive="active">Tasks</a></mat-list-option>
+      </mat-selection-list>
+    </nav>
+
+
+
+
   </mat-drawer>
   <div class="app-main-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      <mat-icon *ngIf="drawer.opened">arrow_back</mat-icon>
-      <mat-icon *ngIf="!drawer.opened">arrow_forward</mat-icon>
-    </button>
+<!--    <button type="button" mat-button (click)="drawer.toggle()">-->
+<!--      <mat-icon *ngIf="drawer.opened">arrow_back</mat-icon>-->
+<!--      <mat-icon *ngIf="!drawer.opened">arrow_forward</mat-icon>-->
+<!--    </button>-->
+
     <router-outlet></router-outlet>
+
   </div>
 </mat-drawer-container>

@@ -1,16 +1,30 @@
 .app-container {
+  background-color: rgba(0,0,0,0);
   width: 100%;
-  height: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: calc(100% - 64px);
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 500 !important;
 }
 
 .app-main-content {
+  padding: 20px;
   display: flex;
-  height: 100%;
+  height: calc(100% - 40px);
   align-items: flex-start;
   justify-content: left;
 }
 
 .app-sidenav {
+  background-color: rgba(0,0,0,.05);
   padding: 20px;
+}
+
+.app-spacer {
+  flex: 1 1 auto;
 }
