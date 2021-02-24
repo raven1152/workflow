@@ -1,0 +1,12 @@
+<mat-chip-list
+  class="mat-chip-list-stacked"
+  cdkDropList
+  cdkDropListOrientation="horizontal"
+  (cdkDropListDropped)="drop($event)">
+  <mat-chip
+    class="example-box"
+    cdkDrag
+    *ngFor="let chip of chips">
+    {{chip.description}}, {{chip.projectCode}}
+  </mat-chip>
+</mat-chip-list>

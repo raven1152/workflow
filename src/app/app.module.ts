@@ -26,6 +26,9 @@ import { TasksComponent } from './views/tasks/tasks.component';
 import { JournalViewComponent } from './views/journal-view/journal-view.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ProjectTagsComponent } from './components/project-tags/project-tags.component';
+import { MatChipsModule } from '@angular/material/chips';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     SprintsComponent,
     ProjectsComponent,
     TasksComponent,
+    ProjectTagsComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +61,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatButtonModule,
     MatListModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatChipsModule,
+    DragDropModule
   ],
   providers: [
     MatDatepickerModule,

@@ -5,24 +5,31 @@
 }
 
 a {
-  text-decoration: none;
+  display: block;
+}
+
+.icon-text {
+  text-align: left;
+}
+
+.icon-text .mat-icon {
+  position: relative;
+  top: 6px;
+  left: -5px;
 }
 
 .active {
-  font-weight: 500 !important;
+  background-color: rgba(0,0,0,.05);
 }
 
 .app-main-content {
   padding: 20px;
-  display: flex;
   height: calc(100% - 40px);
-  align-items: flex-start;
-  justify-content: left;
 }
 
 .app-sidenav {
   background-color: rgba(0,0,0,.05);
-  padding: 20px;
+  padding: 10px;
 }
 
 .app-spacer {

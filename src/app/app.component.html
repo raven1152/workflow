@@ -11,45 +11,50 @@
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
-
 <mat-drawer-container class="app-container" autosize>
   <mat-drawer #drawer class="app-sidenav" mode="side" opened="true">
-
-
-
-<!--    <div>-->
-<!--      Workflow-->
-<!--    </div>-->
-<!--    <mat-selection-list #shoes [multiple]="false">-->
-<!--      <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">-->
-<!--        {{shoe}}-->
-<!--      </mat-list-option>-->
-<!--    </mat-selection-list>-->
-
-
-
-
     <nav>
-      <mat-selection-list multiple="false">
-        <mat-list-option><a class="mat-primary" routerLink="/journal-view" routerLinkActive="active">Journal View</a></mat-list-option>
-        <mat-list-option><a routerLink="/task-view" routerLinkActive="active">Task View</a></mat-list-option>
-        <mat-list-option><a routerLink="/sprints" routerLinkActive="active">Sprints</a></mat-list-option>
-        <mat-list-option><a routerLink="/projects" routerLinkActive="active">Projects</a></mat-list-option>
-        <mat-list-option><a routerLink="/tasks" routerLinkActive="active">Tasks</a></mat-list-option>
-      </mat-selection-list>
+      <div>
+        <a mat-button routerLink="/journal-view" routerLinkActive="active">
+          <div class="icon-text">
+            <mat-icon>timer</mat-icon>
+            <span>Journal View</span>
+          </div>
+        </a>
+        <a mat-button routerLink="/task-view" routerLinkActive="active">
+          <div class="icon-text">
+            <mat-icon>task</mat-icon>
+            <span>Task View</span>
+          </div>
+        </a>
+        <a mat-button routerLink="/sprints" routerLinkActive="active">
+          <div class="icon-text">
+            <mat-icon>directions_run</mat-icon>
+            <span>Sprints</span>
+          </div>
+        </a>
+        <a mat-button routerLink="/projects" routerLinkActive="active">
+          <div class="icon-text">
+            <mat-icon>assignment</mat-icon>
+            <span>Projects</span>
+          </div>
+        </a>
+        <a mat-button routerLink="/tasks" routerLinkActive="active">
+          <div class="icon-text">
+            <mat-icon>add_task</mat-icon>
+            <span>Tasks</span>
+          </div>
+        </a>
+        <a mat-button routerLink="/project-tags" routerLinkActive="active">
+          <div class="icon-text">
+            <mat-icon>sell</mat-icon>
+            <span>Project Tags</span>
+          </div>
+        </a>
+      </div>
     </nav>
-
-
-
-
   </mat-drawer>
   <div class="app-main-content">
-<!--    <button type="button" mat-button (click)="drawer.toggle()">-->
-<!--      <mat-icon *ngIf="drawer.opened">arrow_back</mat-icon>-->
-<!--      <mat-icon *ngIf="!drawer.opened">arrow_forward</mat-icon>-->
-<!--    </button>-->
-
     <router-outlet></router-outlet>
-
   </div>
 </mat-drawer-container>

@@ -5,8 +5,13 @@ import { JournalViewComponent } from './views/journal-view/journal-view.componen
 import { SprintsComponent } from './views/sprints/sprints.component';
 import { ProjectsComponent } from './views/projects/projects.component';
 import { TasksComponent } from './views/tasks/tasks.component';
+import { ProjectTagsComponent } from './components/project-tags/project-tags.component';
 
 const routes: Routes = [
+  {
+    path: 'project-tags',
+    component: ProjectTagsComponent,
+  },
   {
     path: 'journal-view',
     component: JournalViewComponent,
@@ -29,7 +34,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/journal-view',
+    redirectTo: '/project-tags',
     pathMatch: 'full',
   },
 ];
