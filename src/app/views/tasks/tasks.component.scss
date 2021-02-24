@@ -8,10 +8,6 @@
   color: red;
 }
 
-form {
-  width: 100%;
-}
-
 .full-width {
   width: 100%;
 }
@@ -27,4 +23,19 @@ form {
 
 .selected-item {
   background-color: lightgray;
+}
+
+div.red {
+  background-color: red;
+  color: white;
+}
+
+div.blue {
+  background-color: blue;
+  color: white;
+}
+
+div.white {
+  background-color: white;
+  color: black;
 }

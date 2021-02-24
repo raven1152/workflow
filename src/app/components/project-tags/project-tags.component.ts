@@ -5,8 +5,9 @@ import { Project } from '../../models/project';
 
 export class ProjectChip {
   constructor(project: Project) {
-    this.description = project.projectDescription;
+    this.description = project.projectDescription.substr(0, 27) + '...';
     this.projectCode = project.projectCode;
+    // this.projectCode = '...' + project.projectCode.substr(13);
   }
 
   description: string;

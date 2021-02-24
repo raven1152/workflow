@@ -4,9 +4,12 @@
   cdkDropListOrientation="horizontal"
   (cdkDropListDropped)="drop($event)">
   <mat-chip
-    class="example-box"
+    class="chip"
     cdkDrag
     *ngFor="let chip of chips">
-    {{chip.description}}, {{chip.projectCode}}
+    <p>
+      {{chip.description}}<br>
+      {{chip.projectCode}}
+    </p>
   </mat-chip>
 </mat-chip-list>
