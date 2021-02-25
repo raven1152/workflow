@@ -1,3 +1,5 @@
+@import '~src/styles';
+
 .app-container {
   background-color: rgba(0,0,0,0);
   width: 100%;
@@ -5,6 +7,7 @@
 }
 
 a {
+  color: white !important;
   display: block;
 }
 
@@ -19,7 +22,7 @@ a {
 }
 
 .active {
-  background-color: rgba(0,0,0,.05);
+  background-color: mat-color($theming-material-components-accent, 500);
 }
 
 .app-main-content {
@@ -28,7 +31,7 @@ a {
 }
 
 .app-sidenav {
-  background-color: rgba(0,0,0,.05);
+  background-color: mat-color($theming-material-components-primary, 500, .7);
   padding: 10px;
 }
 
