@@ -2,7 +2,7 @@
   <button mat-icon-button (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>Workflow App</span>
+  <span>{{title}}</span>
   <span class="app-spacer"></span>
   <button mat-icon-button>
     <mat-icon>favorite</mat-icon>
@@ -12,7 +12,7 @@
   </button>
 </mat-toolbar>
 <mat-drawer-container class="app-container" autosize>
-  <mat-drawer #drawer class="app-sidenav" mode="side" opened="true">
+  <mat-drawer #drawer class="app-sidenav mat-elevation-z8" mode="side" opened="true">
     <nav>
       <div>
         <a mat-button routerLink="/journal-view" routerLinkActive="active">
@@ -55,6 +55,6 @@
     </nav>
   </mat-drawer>
   <div class="app-main-content">
-    <router-outlet></router-outlet>
+    <router-outlet style="position: relative;"></router-outlet>
   </div>
 </mat-drawer-container>

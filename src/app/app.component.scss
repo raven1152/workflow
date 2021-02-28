@@ -6,6 +6,23 @@
   height: calc(100% - 64px);
 }
 
+@media screen and (max-width: 1000px) {
+  nav a span {
+    display: none;
+  }
+
+  a {
+    color: pink;
+    max-width: 46px;
+    min-width: 46px;
+  }
+
+  a.active mat-icon {
+    box-shadow: black;
+
+  }
+}
+
 a {
   color: white !important;
   display: block;
@@ -31,8 +48,9 @@ a {
 }
 
 .app-sidenav {
-  background-color: mat-color($theming-material-components-primary, 500, .7);
-  padding: 10px;
+  background-color: mat-color($theming-material-components-primary, 500);
+  padding: 4px;
+  border: none;
 }
 
 .app-spacer {

@@ -4,7 +4,9 @@
   cdkDropListOrientation="horizontal"
   (cdkDropListDropped)="drop($event)">
   <mat-chip
+    color="accent"
     class="chip"
+    selected
     cdkDrag
     *ngFor="let chip of chips">
     <p>

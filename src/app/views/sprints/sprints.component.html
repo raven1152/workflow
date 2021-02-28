@@ -1,7 +1,7 @@
 <form #formElement="ngForm" (ngSubmit)="save()">
-  <div class="columns is-gapless is-vcentered">
-    <div class="column is-6">
-      <mat-form-field class="full-width">
+  <div class="sprints-container">
+    <div class="sprints-item-4">
+      <mat-form-field>
         <mat-label>Description</mat-label>
         <input
           matInput
@@ -17,8 +17,8 @@
         <mat-error *ngIf="descriptionVar.invalid">Description is required</mat-error>
       </mat-form-field>
     </div>
-    <div class="column is-2">
-      <mat-form-field class="full-width">
+    <div class="sprints-item-4">
+      <mat-form-field>
         <mat-label>From date</mat-label>
         <input
           matInput
@@ -36,8 +36,8 @@
         <mat-error *ngIf="fromDateVar.invalid">A valid date is required</mat-error>
       </mat-form-field>
     </div>
-    <div class="column is-2">
-      <mat-form-field class="full-width">
+    <div class="sprints-item-3">
+      <mat-form-field>
         <mat-label>To date</mat-label>
         <input
           matInput
@@ -58,7 +58,7 @@
         <mat-error *ngIf="toDateVar.invalid">A valid date is required</mat-error>
       </mat-form-field>
     </div>
-    <div class="column is-2 is-centered">
+    <div class="sprints-item-1">
       <button
         style="margin-left: 10px;"
         mat-icon-button
@@ -86,11 +86,15 @@
     </div>
   </div>
 </form>
-<div class="full-width">
-  <div *ngFor="let sp of sprints" class="columns is-gapless is-vcentered no-spacing"[ngClass]="{ 'selected-item': sp.id === sprint.id }" (click)="itemClick(sp)">
-    <div class="column is-6 no-spacing">{{sp.description}}</div>
-    <div class="column is-2 no-spacing">{{sp.fromDate | date:'MM/dd/yyyy'}}</div>
-    <div class="column is-2 no-spacing">{{sp.toDate | date:'MM/dd/yyyy'}}</div>
-    <div class="column is-2 no-spacing" style="margin-left: 10px;">{{calcDays(sp).toFixed(0)}}D</div>
+<div class="container">
+  <div
+    *ngFor="let sp of sprints"
+    class="row"
+    [ngClass]="{ 'selected-item': sp.id === sprint.id }"
+    (click)="itemClick(sp)">
+    <div class="four columns">14</div>
+    <div class="three columns">14</div>
+    <div class="two columns">14</div>
+    <div class="three columns">14</div>
   </div>
 </div>
